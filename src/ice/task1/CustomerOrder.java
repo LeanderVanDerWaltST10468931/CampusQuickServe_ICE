@@ -32,4 +32,30 @@ public class CustomerOrder
         return quantity * price;
     }
     
+    
+    public String getName()
+    {
+        return name;
+    }
+    
+    public String getStudentNumber()
+    {
+        return studentNumber;
+    }
+    
+    public String getitemOrdered()
+    {
+        return itemOrdered;
+    }
+    
+    public int getquantiy()
+    {
+        return quantity;
+    }
+    
+    public float getprice()
+    {
+        return price;
+    }
+    
 }

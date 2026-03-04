@@ -38,7 +38,8 @@ public class ICETask1
         
         CustomerOrder order = new CustomerOrder(name, studentNumber, itemOrdered, quantity, price);
         
-        
+        System.out.println("---Campus Quickserve---\n"
+                         + "Customer :" + order.getName());
         
         
     }
