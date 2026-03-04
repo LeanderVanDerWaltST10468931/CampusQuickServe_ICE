@@ -12,8 +12,28 @@ public class ICETask1
     
     public static void main(String[] args) 
     {
+        String name;
+        String studentNumber;
+        String itemOrdered;
+        int qauntity;
+        double price;
         
-        JOptionPane.showInputDialog("Please enter your name");
+        try
+        {
+            name = JOptionPane.showInputDialog("Please enter your name");
+            studentNumber = JOptionPane.showInputDialog("Please enter your Student Number");
+            itemOrdered = JOptionPane.showInputDialog("Please enter the name of the item");
+            qauntity = Integer.parseInt(JOptionPane.showInputDialog("Please enter the number of items"));
+            price = Double.parseDouble(JOptionPane.showInputDialog("Please enter the price"));
+        }
+        catch(Exception E)
+        {
+            System.out.println("Please enter a valid input");
+        }
+        
+        
+        
+        
     }
     
 }
