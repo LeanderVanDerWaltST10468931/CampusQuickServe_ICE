@@ -15,7 +15,7 @@ public class ICETask1
         String name;
         String studentNumber;
         String itemOrdered;
-        int qauntity;
+        int quantity;
         double price;
         
         try
@@ -23,7 +23,7 @@ public class ICETask1
             name = JOptionPane.showInputDialog("Please enter your name");
             studentNumber = JOptionPane.showInputDialog("Please enter your Student Number");
             itemOrdered = JOptionPane.showInputDialog("Please enter the name of the item");
-            qauntity = Integer.parseInt(JOptionPane.showInputDialog("Please enter the number of items"));
+            quantity = Integer.parseInt(JOptionPane.showInputDialog("Please enter the number of items"));
             price = Double.parseDouble(JOptionPane.showInputDialog("Please enter the price"));
         }
         catch(Exception E)

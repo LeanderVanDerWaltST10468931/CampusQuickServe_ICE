@@ -8,7 +8,7 @@ public class CustomerOrder
     private String name;
     private String studentNumber;
     private String itemOrdered;
-    private int qauntity;
+    private int quantity;
     private float price;
     
     final double VAT = 1.15;
@@ -18,10 +18,14 @@ public class CustomerOrder
         this.name = name;
         this.studentNumber = studentNumber;
         this.itemOrdered = itemOrdered;
-        this.qauntity = quantity;
+        this.quantity = quantity;
         this.price = price;
     }
     
+    public double CalcTotal()
+    {
+      return quantity * price * VAT;  
+    }
     
     
 }
