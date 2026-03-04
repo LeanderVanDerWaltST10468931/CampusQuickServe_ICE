@@ -27,5 +27,9 @@ public class CustomerOrder
       return quantity * price * VAT;  
     }
     
+    public double CalcSubTotal()
+    {
+        return quantity * price;
+    }
     
 }
