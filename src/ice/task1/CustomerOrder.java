@@ -32,6 +32,10 @@ public class CustomerOrder
         return quantity * price;
     }
     
+    public double CalcVATOnly()
+    {
+        return CalcTotal() - CalcSubTotal();
+    }
     
     public String getName()
     {
