@@ -1,4 +1,5 @@
 package ice.task1;
+import java.text.DecimalFormat;
 
 /**
  * @author leand
@@ -10,6 +11,9 @@ public class CustomerOrder
     private String itemOrdered;
     private int quantity;
     private float price;
+    
+    
+    DecimalFormat format = new DecimalFormat("######.##");
     
     final double VAT = 1.15;
     
@@ -37,6 +41,11 @@ public class CustomerOrder
         return CalcTotal() - CalcSubTotal();
     }
     
+    public double CalcDiscount()
+    {
+        return CalcSubTotal() / 90;
+    }
+    
     public String getName()
     {
         return name;
@@ -61,5 +70,40 @@ public class CustomerOrder
     {
         return price;
     }
+    
+    public void displayData()
+    {
+    
+        if (quantity < 3)
+        {
+        System.out.println("---Campus Quickserve---\n"
+                         + "Customer: " + getName() + "\n"
+                         + "Student Number: " + getStudentNumber() + "\n\n"
+                         + "Item Ordered: " + getitemOrdered() + "\n"
+                         + "Quantity: " + getquantiy() + "\n"
+                         + "Price: R" + format.format(getprice()) + "\n\n"
+                         + "Subototal: R" + format.format(CalcSubTotal()) + "\n"
+                         + "VAT(15%): R" + format.format(CalcVATOnly()) + "\n"
+                         + "Total: R" + format.format(CalcTotal()));
+        }               
+        else
+        {
+        System.out.println("---Campus Quickserve---\n"
+                         + "Customer: " + getName() + "\n"
+                         + "Student Number: " + getStudentNumber() + "\n\n"
+                         + "Item Ordered: " + getitemOrdered() + "\n"
+                         + "Quantity: " + getquantiy() + "\n"
+                         + "Price: R" + format.format(getprice()) + "\n\n"
+                         + "Discount: R" + format.format(CalcDiscount()) + "\n"
+                         + "Subototal: R" + format.format(CalcSubTotal()) + "\n"
+                         + "VAT(15%): R" + format.format(CalcVATOnly()) + "\n"
+                         + "Total: R" + format.format(CalcTotal()));
+        }
+        
+        System.out.println("\nThank you for your order!\n"
+                         + "--------------------------");
+    }
+    
+    
     
 }
